@@ -15,4 +15,19 @@ public class EmployeeFactory {
                 .setLastName(lastName)
                 .build();
     }
+
+    public static Employee createEmployee(String firstName, String lastName) {
+        //must test first
+        if (Helper.isNullorEmpty(firstName)
+                || Helper.isNullorEmpty(lastName))
+            return null;
+
+        String employeeNumber = Helper.generateID();
+
+        return new Employee.Builder().setEmployeeNumber(employeeNumber)
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .build();
+    }
+
 }

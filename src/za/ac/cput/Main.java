@@ -13,7 +13,11 @@ public class Main {
         //Allows you to personally choose the setters you want to use when constructing a new object
         Employee e = EmployeeFactory.createEmployee("30011466", "Matthew",
                 "Shaw");
+        if (e != null) {
+            System.out.println(e.toString());
+        } else {
+            System.out.println("Object was unable to be created.");
+        }
 
-        System.out.println(e.toString());
     }
 }
